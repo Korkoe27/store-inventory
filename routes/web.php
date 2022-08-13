@@ -28,3 +28,6 @@ Route::get('/edit_product_image',[ProjectController::class,'edit_product_image']
 
 
 Route::post('/update_product', [ProjectController::class,'update_product'])->name('update_product');
+
+
+Route::post('/create_product', [ProjectController::class,'create_product'])->name('create_product');

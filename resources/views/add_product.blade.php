@@ -22,7 +22,9 @@
 
 
           <div class="mx-auto container">
-              <form id="create-form"  enctype="multipart/form-data">
+              <form id="create-form"  enctype="multipart/form-data" method="POST" action="{{route('create_product')}}">
+
+              @csrf
             
                 <div class="form-group mt-2">
                     <label>Title</label>
@@ -51,17 +53,17 @@
                 <div class="form-group mt-2">
                     <label>Category</label>
                     <select  class="form-select" required name="category">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="Tech Gadgets and Devices">Tech Gadgets and Devices</option>
+                        <option value="Gaming Gadgets">Gaming Gadgets</option>
+                        <option value="Wireless Devices">Wireless Devices</option>
+                        <option value="Kitchen Appliances">Kitchen Appliances</option>
                     </select>
                 </div>
 
 
                 <div class="form-group mt-2">
                       <label>type</label>
-                      <input type="text" class="form-control" id="tyle" name="type" placeholder="type" required/>
+                      <input type="text" class="form-control" id="type" name="type" placeholder="type" required/>
                   </div>
 
                 <div class="form-group mt-2">

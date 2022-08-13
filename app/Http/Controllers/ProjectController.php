@@ -62,4 +62,38 @@ class ProjectController extends Controller
 
         // return view('edit_product_image');
     }
+
+    public function create_product(Request $request){
+
+       $name = $request->input('name');
+       $description = $request->input('description');
+       $price = $request->input('price');
+       $sale_price = $request->input('sale_price');
+       $quantity = $request->input('quantity');
+       $category = $request->input('category');
+       $type = $request->input('type');
+
+       $image = $request->file('image');
+       $image_name= $image->getClientOriginalName();
+
+
+       //insert new record in database.
+       DB::table('product')->insert(
+        [
+            'name'=>$name,
+            'description'=>$description,
+            'price'=>$price,
+            'sale_price'=>$sale_price,
+            'quantity'=>$quantity,
+            'category'=>$category,
+            'type'=>$type,
+            'image'=>$image_name
+
+
+        ]);
+
+        $image->move('images/',$image_name);
+
+        return redirect('/')->with('success_message','You have successfully added a new product to your store.');
+    }
 }
