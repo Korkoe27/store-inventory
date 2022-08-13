@@ -38,7 +38,7 @@
                 </div>
                  <div class="form-group mt-2">
                     <label>Sale price</label>
-                    <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="Sale price" required/>
+                    <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="Sale price"/>
                 </div>
 
 

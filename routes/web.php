@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ProjectController::class,'index'])->name('home');
+
+
+
+Route::get('/add_product',[ProjectController::class,'add_product'])->name('add_product');
+
+
+Route::get('/edit_product/{id}',[ProjectController::class,'edit_product'])->name('edit_product');
+
+
+Route::get('/edit_product_image',[ProjectController::class,'edit_product_image'])->name('edit_product_image');
+
+
+Route::post('/update_product', [ProjectController::class,'update_product'])->name('update_product');

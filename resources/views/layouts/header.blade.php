@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Dashboard Template · Bootstrap v5.1</title>
+    <title>Store Inventory</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
@@ -21,7 +21,7 @@
 <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
 <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-<link rel="stylesheet" href="{{ asset('css/style.css) }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 <meta name="theme-color" content="#7952b3">
 
 
@@ -77,7 +77,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('add_product')}}">
               <span data-feather="bar-chart-2"></span>
               Create Product
             </a>
