@@ -41,10 +41,10 @@
                     <input type="number" class="form-control" id="price" name="price" placeholder="Price" required value="{{$product->price}}"/>
                 </div>
 
-                <div class="form-group mt-2">
+                <!-- <div class="form-group mt-2">
                     <label>Sale price</label>
                     <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="sale price" value="{{$product->sale_price}}"
-                </div>
+                </div> -->
 
                  <div class="form-group mt-2">
                       <label>Quantity</label>

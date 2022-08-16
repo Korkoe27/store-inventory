@@ -19,7 +19,7 @@
       <h2>Create Product</h2>
       <div class="table-responsive">
       
-
+        @include('messages')
 
           <div class="mx-auto container">
               <form id="create-form"  enctype="multipart/form-data" method="POST" action="{{route('create_product')}}">
@@ -38,10 +38,10 @@
                     <label>Price</label>
                     <input type="text" class="form-control" id="price" name="price" placeholder="Price" required/>
                 </div>
-                 <div class="form-group mt-2">
+                 <!-- <div class="form-group mt-2">
                     <label>Sale price</label>
                     <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="Sale price"/>
-                </div>
+                </div> -->
 
 
                 <div class="form-group mt-2">
@@ -57,6 +57,7 @@
                         <option value="Gaming Gadgets">Gaming Gadgets</option>
                         <option value="Wireless Devices">Wireless Devices</option>
                         <option value="Kitchen Appliances">Kitchen Appliances</option>
+                        <option value="Fashion wear">Fashion and Wearables</option>
                     </select>
                 </div>
 

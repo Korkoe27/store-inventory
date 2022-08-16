@@ -32,13 +32,14 @@
               <th scope="col">Category</th>
               <th scope="col">Type</th>
               <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
             </tr>
           </thead>
           <tbody>
 
           @foreach($products as $product)
 
-            <tr;">
+            <tr>
               <td>{{ $product->id }}</td>
               <td><img class="product-image"; src="{{ asset('product-images/'.$product->image) }}" alt=""></td>
               <td>{{ $product->name }}</td>
@@ -47,6 +48,7 @@
               <td>{{ $product->category }}</td>
               <td>{{ $product->type }}</td>
               <td><a href="{{ route('edit_product', ['id'=>$product->id]) }}" class="btn btn-warning">Edit</a></td>
+              <td><a onclick="return confirm('Are you sure you want to delete this product? ' )" href="{{ route('delete_product', ['id'=>$product->id]) }}" class="btn btn-warning">Delete</a></td>
             </tr>
 
             @endforeach
