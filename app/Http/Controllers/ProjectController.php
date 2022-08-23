@@ -12,7 +12,7 @@ class ProjectController extends Controller
 
     function index(){
 
-        $products = DB::table('products')->get();
+        $products = DB::table('products')->paginate(5);
 
         return view('index', ['products'=>$products]);
     }
@@ -90,7 +90,6 @@ class ProjectController extends Controller
             'name'=>$name,
             'description'=>$description,
             'price'=>$price,
-            // 'sale_price'=>$sale_price,
             'quantity'=>$quantity,
             'category'=>$category,
             'type'=>$type,

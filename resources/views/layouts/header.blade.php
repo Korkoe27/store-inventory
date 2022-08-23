@@ -55,7 +55,10 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <form action="{{ route('logout')}}" method="POST">
+        @csrf
+        <input type="submit" value="Sign Out" class="nav-link px-3 sign-out-btn">
+      </form>
     </div>
   </div>
 </header>
@@ -77,13 +80,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('add_product')}}">
+            <a class="nav-link" href="{{ route('add_product')}}">
               <span data-feather="bar-chart-2"></span>
               Create Product
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('login')}}">
               <span data-feather="layers"></span>
               Account
             </a>

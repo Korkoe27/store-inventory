@@ -58,6 +58,8 @@
                         <option value="Wireless Devices">Wireless Devices</option>
                         <option value="Kitchen Appliances">Kitchen Appliances</option>
                         <option value="Fashion wear">Fashion and Wearables</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Music">Music</option>
                     </select>
                 </div>
 

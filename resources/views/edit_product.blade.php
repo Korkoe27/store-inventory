@@ -59,6 +59,8 @@
                         <option value="Bluetooth Speakers">Bluetooth Speakers</option>
                         <option value="Earbuds">Earbuds</option>
                         <option value="Tech Gadgets and Devices">Tech Gadgets and Devices</option>
+                        <option value="photography">Photography</option>
+                        <option value="Music">Music</option>
                     </select>
                 </div>
                 

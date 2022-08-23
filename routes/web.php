@@ -14,7 +14,7 @@ use App\Http\Controllers\ProjectController;
 |
 */
 
-Route::get('/',[ProjectController::class,'index'])->name('home');
+Route::get('/',[ProjectController::class,'index'])->name('home')->middleware('auth');
 
 
 
@@ -35,3 +35,12 @@ Route::post('/create_product', [ProjectController::class,'create_product'])->nam
 
 
 Route::post('/delete', [ProjectController::class,'delete'])->name('delete');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
